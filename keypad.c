@@ -55,14 +55,14 @@ uint8 KeyPad_getPressedKey(void){
 				if(BIT_IS_CLEAR(KEYPAD_PORT_IN,(row+2))) /* if the switch is press in this row */
 				{
 					#if (N_col == 3)  
-						return KeyPad_4x3_adjustKeyNumber((row*N_col)+col+1); 
+						return KeyPad_4x3_adjustKeyNumber((row*N_col)+col+1);
 					#elif (N_col == 4)
 						return KeyPad_4x4_adjustKeyNumber((row*N_col)+col+1);
 					#endif				
 				}
 			}
 		}
-	}	
+	}
 }
 
 #if (N_col == 3) 

@@ -22,7 +22,7 @@
 
 /* Keypad configurations for number of rows and columns */
 #define N_col 3
-#define N_row 3
+#define N_row 2
 
 /* Keypad Port Configurations */
 #define KEYPAD_PORT_OUT REG_PORTC
