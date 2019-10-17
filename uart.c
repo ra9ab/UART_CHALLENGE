@@ -30,6 +30,26 @@ uint8  uart_receive_data (void)
 {
 	while (get_bit(REG_UCSRA,PIN7)==0);
 	return REG_UDR ;
-
-
 }
+void UART_sendString(const uint8 *Str)
+{
+	uint8 i = 0;
+	while(Str[i] != '\0')
+	{
+		uart_transtmit_data(Str[i]);
+		i++;
+	}
+}
+
+void UART_receiveString(uint8 *Str)
+{
+	uint8 i = 0;
+	Str[i] = uart_receive_data();
+	while(Str[i] != '#')
+	{
+		i++;
+		Str[i] = uart_receive_data();
+	}
+	Str[i] = '\0';
+}
+
