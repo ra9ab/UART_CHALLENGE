@@ -363,7 +363,7 @@ uint8 DIO_write_pin_value(uint8 port_id,uint8 pin_number,uint8 value)
   * Return:status(OK,NOK)
  ************************************
   */
-uint8 DIO_read_pin_value (uint8 port_id,uint8 pin_number,uint8* got)
+uint8  DIO_read_pin_value(uint8 port_id,uint8 pin_number,uint8* got)
 {
 	uint8 retval = OK;
 

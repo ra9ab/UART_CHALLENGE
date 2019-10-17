@@ -8,10 +8,10 @@
 
 #ifndef DIO_CNFG_H_
 #define DIO_CNFG_H_
+
+#define NUM_OF_PINS 2
+
 #include "stdtypes.h"
-
-#define NUM_OF_PINS 12
-
 
 typedef struct
 {
